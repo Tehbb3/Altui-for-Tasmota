@@ -1,0 +1,9 @@
+html {
+    background-color: #222;
+    color: #eee;
+}
+
+.content-box {
+    width: 20rem;
+    margin: auto;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Lignting</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/global.css">
+</head>
+<body>
+
+    <div class="content-box">
+        <h1 class="text-centered">Tasmota Altui</h1>
+        <hr>
+        <p class="text-centered">
+            An alternate interface for lights running the Tasmota firmware
+        </p>
+        <p class="text-centered">Currently set light Ip: <span  id="ip-readout"></span></p>
+        <input type="text" id="ip-input" placeholder="Light IP">
+        <button onclick="updateLightIp()">Update IP</button>
+        <hr>
+        <br>
+        <button onclick="light.toggle()">Toggle Light</button>
+        <br>
+        <hr>
+        <br>
+        <button onclick='light.setColor(document.getElementById("color-input").value)'>SetColor</button>
+        <input type="text" name="Color Value" id="color-input" placeholder="Colour Value #HEX">
+        <br>
+        <hr>
+        <br>
+
+            <button onclick='light.setColor("9BEEE8")'>SoftBlue</button>
+            <button onclick='light.setColor("EEE0BA")'>EvenWhite</button>
+            <button onclick='light.setColor("EECB69")'>Sunrise</button>
+            <button onclick='light.setColor("0A0000")'>DeadRed</button>
+            <button onclick="fadeRGB()">FadeRGB</button>
+        <br>
+        <hr>
+        <input type="number" name="led" id="led-num" placeholder="Led#">
+        <input type="text" name="Color Value" id="led-color" placeholder="Colour Value #HEX">
+        <button onclick='light.setLed(document.getElementById("led-num").value, document.getElementById("led-color").value)'>Set colour for specific led</button>
+        <br>
+        
+
+        
+
+
+        <hr>
+        <a href="http://www.tehbb.xyz/" class="text-centered decoration-none fg-bb">tehbb 2021</a>
+
+    </div>
+
+
+    <script src="./js/script.js"></script>
+
+</body>
+</html>
