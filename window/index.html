@@ -1,0 +1,127 @@
+<!-- 
+  # DON'T BE A DICK PUBLIC LICENSE
+
+> Version 1.1, December 2016
+
+> Copyright (C) [2021] [Tehbb]
+
+Everyone is permitted to copy and distribute verbatim or modified
+copies of this license document.
+
+> DON'T BE A DICK PUBLIC LICENSE
+> TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+1. Do whatever you like with the original work, just don't be a dick.
+
+   Being a dick includes - but is not limited to - the following instances:
+
+ 1a. Outright copyright infringement - Don't just copy this and change the name.
+ 1b. Selling the unmodified original with no work done what-so-ever, that's REALLY being a dick.
+ 1c. Modifying the original work to contain hidden harmful content. That would make you a PROPER dick.
+
+2. If you become rich through modifications, related works/services, or supporting the original work,
+share the love. Only a dick would make loads off this work and not buy the original work's
+creator(s) a pint.
+
+3. Code is provided with no warranty. Using somebody else's code and bitching when it goes wrong makes
+you a DONKEY dick. Fix the problem yourself. A non-dick would submit the fix back. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+
+    <link rel="stylesheet" href="./css/window.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/global.css"/>
+  </head>
+  <body>
+
+    <header id="titlebar">
+      <div id="drag-region">
+
+        <div id="window-title">
+          <span>Tehbb's Tasmota Interface</span>
+        </div>
+
+
+        
+
+        <div id="window-controls">
+
+          <div class="button" id="min-button">
+            <img class="icon" srcset="icons/min-w-10.png 1x, icons/min-w-12.png 1.25x, icons/min-w-15.png 1.5x, icons/min-w-15.png 1.75x, icons/min-w-20.png 2x, icons/min-w-20.png 2.25x, icons/min-w-24.png 2.5x, icons/min-w-30.png 3x, icons/min-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="max-button">
+            <img class="icon" srcset="icons/max-w-10.png 1x, icons/max-w-12.png 1.25x, icons/max-w-15.png 1.5x, icons/max-w-15.png 1.75x, icons/max-w-20.png 2x, icons/max-w-20.png 2.25x, icons/max-w-24.png 2.5x, icons/max-w-30.png 3x, icons/max-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="restore-button">
+            <img class="icon" srcset="icons/restore-w-10.png 1x, icons/restore-w-12.png 1.25x, icons/restore-w-15.png 1.5x, icons/restore-w-15.png 1.75x, icons/restore-w-20.png 2x, icons/restore-w-20.png 2.25x, icons/restore-w-24.png 2.5x, icons/restore-w-30.png 3x, icons/restore-w-30.png 3.5x" draggable="false" />
+          </div>
+          <div class="button" id="close-button">
+            <img class="icon" srcset="icons/close-w-10.png 1x, icons/close-w-12.png 1.25x, icons/close-w-15.png 1.5x, icons/close-w-15.png 1.75x, icons/close-w-20.png 2x, icons/close-w-20.png 2.25x, icons/close-w-24.png 2.5x, icons/close-w-30.png 3x, icons/close-w-30.png 3.5x" draggable="false" />
+          </div>
+
+          
+
+        </div>
+      </div>
+    </header>
+
+    <div id="main">
+
+
+
+      <div class="content-box">
+       
+        <!-- <p class="text-centered">
+            An alternate interface for lights running the Tasmota firmware
+        </p> -->
+        <p class="text-centered">Currently light Ip: <span  id="ip-readout"></span></p>
+        <input type="text" id="ip-input" placeholder="Light IP">
+        <button onclick="updateLightIp()">Update IP</button>
+        <hr>
+        <button class="powerToggle" onclick="light.toggle()">💡</button>
+        <hr>
+
+        
+        <h2>Preset colors:</h2>
+          <button onclick='light.setColor("9BEEE8")'>SoftBlue</button>
+          <button onclick='light.setColor("EEE0BA")'>EvenWhite</button>
+          <button onclick='light.setColor("EECB69")'>Sunrise</button>
+          <button onclick='light.setColor("0A0000")'>DeadRed</button>
+          <button onclick="fadeRGB()">FadeRGB</button>
+      <br>
+      <hr>
+
+        <button onclick='light.setColor(document.getElementById("color-input").value.substring(1))'>SetColor</button>
+        <!-- <button onclick='console.log(document.getElementById("color-input").value)'>SetColor</button> -->
+        <input type="color" name="Color Value" id="color-input" placeholder="Colour Value #HEX" value="#000" onchange='light.setColor(document.getElementById("color-input").value.substring(1))'>
+
+        <hr>
+        <input type="number" name="led" id="led-num" placeholder="Led#">
+        <input type="color" name="Color Value" id="led-color" placeholder="Colour Value #HEX" onchange='light.setLed(document.getElementById("led-num").value, document.getElementById("led-color").value.substring(1))'>
+        <button onclick='light.setLed(document.getElementById("led-num").value, document.getElementById("led-color").value.substring(1))'>Set colour for specific led</button>
+        <br>
+        
+
+
+
+
+        <hr>
+        <a href="http://www.tehbb.xyz/" class="text-centered decoration-none fg-bb">Tehbb 2021</a>
+
+    </div>
+    <div class="text-centered" id="backlog-out" style="max-width: 80%;">
+
+    </div>
+    </div>
+
+    <script>
+      // You can also require other files to run in this process
+      require('./js/renderer.js')
+      // require('./js/light.js')
+    </script>
+    <script src="./js/light.js"></script>
+  </body>
+</html>

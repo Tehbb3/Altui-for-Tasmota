@@ -1,0 +1,122 @@
+/* # DON'T BE A DICK PUBLIC LICENSE
+
+> Version 1.1, December 2016
+
+> Copyright (C) [2021] [Tehbb]
+
+Everyone is permitted to copy and distribute verbatim or modified
+copies of this license document.
+
+> DON'T BE A DICK PUBLIC LICENSE
+> TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+1. Do whatever you like with the original work, just don't be a dick.
+
+   Being a dick includes - but is not limited to - the following instances:
+
+ 1a. Outright copyright infringement - Don't just copy this and change the name.
+ 1b. Selling the unmodified original with no work done what-so-ever, that's REALLY being a dick.
+ 1c. Modifying the original work to contain hidden harmful content. That would make you a PROPER dick.
+
+2. If you become rich through modifications, related works/services, or supporting the original work,
+share the love. Only a dick would make loads off this work and not buy the original work's
+creator(s) a pint.
+
+3. Code is provided with no warranty. Using somebody else's code and bitching when it goes wrong makes
+you a DONKEY dick. Fix the problem yourself. A non-dick would submit the fix back. */
+
+
+
+h1 {
+    /* margin: 0 0 10px 0; */
+    font-weight: 600;
+    line-height: 1.2;
+    color: rgba(255,255,255,0.4);
+
+  }
+  p {
+    /* margin-top: 10px; */
+    color: rgba(255,255,255,0.4);
+  }
+  h2 {
+    /* margin: 0 0 10px 0; */
+    font-weight: 600;
+    line-height: 1.2;
+    color: rgba(255,255,255,0.4);
+
+  }
+
+  input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 32px;
+	height: 1rem;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+
+input[type="text"] {
+	-webkit-appearance: none;
+	border: none;
+    background-color: #111d25;
+    color: rgba(255,255,255,0.4);
+
+}
+input[type="text"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="text"]::-webkit-color-swatch {
+	border: none;
+}
+
+
+input[type="number"] {
+	-webkit-appearance: none;
+	border: none;
+    background-color: #111d25;
+    color: rgba(255,255,255,0.4);
+
+}
+input[type="number"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="number"]::-webkit-color-swatch {
+	border: none;
+}
+
+
+
+hr {
+    color: rgba(255,255,255,0.4);
+}
+
+
+.content-box {
+    text-align: center;
+}
+
+.content-box {
+    width: 20rem;
+    margin: auto;
+}
+
+body {
+    font-family: monospace;
+}
+button {
+    background-color: #1A2933;
+    color: rgba(255,255,255,0.4);
+
+}
+
+.powerToggle {
+    background-color: #1A2933;
+    /* color: rgba(255,255,255,0.4); */
+    border: none;
+    font-size: 3rem;
+}

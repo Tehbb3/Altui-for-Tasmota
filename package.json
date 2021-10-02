@@ -1,0 +1,15 @@
+{
+  "name": "Tehbb's Altui For Tasmota",
+  "version": "1.0.0",
+  "description": "A control client for Tasmota lighting",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Tehbb",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.4.0",
+    "electron-packager": "^15.4.0"
+  }
+}

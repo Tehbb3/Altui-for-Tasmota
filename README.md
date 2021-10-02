@@ -1,4 +1,6 @@
-# ALTUI for Tasmota lighting
-This is just an api interface for tasmota
-<br>
-Just whipped this up while waiting the other day
+## Tehbb's Tasmota Altui Client
+
+Alternative User Interface For Tasmota Lighting
+Uses electron (ik)
+
+Just something quick i whipped up so i can control my led strip
