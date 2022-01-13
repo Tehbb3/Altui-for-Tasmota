@@ -15,7 +15,7 @@ Sample command to compule yourself
 electron-packager TTI BuildDirectory --platform=win32 --arch=x64
 
 
-##How to run from source:
+## How to run from source:
 
 make sure you have node and npm installed on your system
 
@@ -28,7 +28,7 @@ Run the client: (ass assuming you are in the programs directory)
 node .
 ```
 
-##Notes and stuff:
+## Notes and stuff:
 
 to change the default light ip change the variable in /window/js/light.js
 ```
